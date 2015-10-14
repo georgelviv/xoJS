@@ -22,4 +22,4 @@ To install game you should :
 
     $ node server
 
-5. Enjoy the game ;)
+5.Enjoy the game ;)
