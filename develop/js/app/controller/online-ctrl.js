@@ -97,6 +97,7 @@ function OnlineCtrl ($rootScope, Game) {
 		game.init();
 		game.initOnline();
 		online.playBtnDisabled = true;
+		online.msg = 'You are: ' + player;
 		online.playBtnText = 'Wait for player';
 		socket.emit('restart');
 		socketEvents();
