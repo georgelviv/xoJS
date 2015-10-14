@@ -1,6 +1,8 @@
 # xoJs
 -----
-xoJs - simple tic tac toe game for browser.
+xoJs - simple tic tac toe game for browser. 
+Used libraries and frameworks: angularjs, expressjs, socket.io, gulp, snapsvg.
+You can play pass by pass, or online.
 
 To install game you should :
 
@@ -19,3 +21,5 @@ To install game you should :
 4.Run server with node
 
     $ node server
+
+5. Enjoy the game ;)
