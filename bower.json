@@ -1,0 +1,23 @@
+{
+  "name": "xoJs",
+  "version": "0.0.0",
+  "authors": [
+    "Yura Chukarina <lvivgeorge@gmail.com>"
+  ],
+  "description": "xoJs tic tac toe game",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-route": "~1.4.6",
+    "snap.svg": "~0.4.1",
+    "angular-animate": "~1.4.6"
+  }
+}

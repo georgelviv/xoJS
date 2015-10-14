@@ -1,0 +1,28 @@
+.game-wrapper
+	display block
+	width 300px
+	height 300px
+	margin 40px auto
+	&__line-grid
+		stroke dark-blue-color
+	&__block
+		fill #fff
+		&:hover 
+			cursor pointer
+		&--active
+			fill blue-color
+	&__x
+		stroke dark-blue-color
+		stroke-linecap round
+		stroke-width 2px
+	&__o
+		stroke dark-blue-color
+		stroke-width 2px
+		transform-origin center
+		stroke-dasharray 1000
+		fill none
+		transform rotate(-90deg)
+	&__win-line
+		stroke dark-blue-color
+		stroke-linecap round
+		stroke-width 5px

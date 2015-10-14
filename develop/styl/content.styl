@@ -1,0 +1,55 @@
+.content
+	margin 20px auto
+	width 80%
+	&__heading
+		@extends .disable-select
+		font-size 3em
+		text-align center
+		color dark-green-color
+		animation-name animation__fade-in-down
+		animation-duration 3s
+	&___ng-view
+		&.ng-leave
+			background-color red
+	&__game-wrapper
+		position relative
+	&__play-btn
+		@extends .center
+		box-sizing border-box
+		top 50%
+		height 50px
+		width 200px
+		margin-left -(@width / 2)
+		margin-top -(@height / 2)
+		line-height 48px
+		font-size 1.5em
+		text-align center
+		text-transform uppercase
+		color dark-blue-color
+		border 2px solid dark-green-color
+		background-color #fff
+		animation-duration 1s
+		transition background-color 0.5s, color 0.5s
+		&:disabled
+			&:hover 
+				color dark-blue-color
+				cursor default
+				background-color @background-color
+		&:hover
+			cursor pointer
+			color #fff
+			background-color dark-blue-color
+		&--online
+			top 90px
+			&.ng-hide-add
+				animation-name animation__fade-out-left
+		&--home
+			top 160px
+			&.ng-hide-add
+				animation-name animation__fade-out-left
+		&--pass
+			&.ng-hide-add
+				animation-name animation__fade-out-down
+		&.ng-hide-remove
+			backface-visibility visible
+			animation-name animation__flip-in-x

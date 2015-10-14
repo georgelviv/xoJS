@@ -1,0 +1,29 @@
+{
+  "name": "xojs",
+  "version": "0.0.1",
+  "description": "xoJs game on sockets",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run server & npm run gulp",
+    "server": "node server",
+    "gulp": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.7.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-stylus": "^2.0.6",
+    "gulp-uglify": "^1.2.0",
+    "run-sequence": "^1.1.2"
+  },
+  "dependencies": {
+    "angular": "^1.4.4",
+    "express": "^4.13.3",
+    "socket.io": "^1.3.7"
+  }
+}

@@ -1,0 +1,5 @@
+{
+	"buildDir": "build",
+	"startPoint": "index.html",
+	"frontDir": "develop"
+}
