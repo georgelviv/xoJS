@@ -176,7 +176,7 @@ function removeUser (socket, report) {
 	var pair;
 	for (i = 0; i < this.list.length; i++) {
 		pair = this.list[i];
-		if (pair.players[0].id == socket.id) {
+		if (pair.players[0] && pair.players[0].id == socket.id) {
 			pair.players.shift();
 			break;
 		}
@@ -184,15 +184,18 @@ function removeUser (socket, report) {
 			pair.players.pop();
 			break;
 		}
-		if (!this.list[i].players.length) {
-			this.list[i].splice(i, 1);
+		if (!pair.players.length) {
+			this.list.splice(i, 1);
 		}
 	}
-	pair.gameStatus = 'wait';
-	if (pair.players[0] && report) {
-		pair.players[0].socket.emit('events', {
-			typeEvent: 'disconnect',
-			list: this.genPairs()
-		});
+	if (pair) {
+		pair.gameStatus = 'wait';
+
+		if (pair.players[0] && report) {
+			pair.players[0].socket.emit('events', {
+				typeEvent: 'disconnect',
+				list: this.genPairs()
+			});
+		}
 	}
 }

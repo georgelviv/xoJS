@@ -17,30 +17,24 @@ function OnlineCtrl ($rootScope, Game) {
 	$rootScope.$on('move', moveHandler);
 
 	function clearSocketsListeners () {
-		console.log('Clear');
 		socket.removeAllListeners('events');
 	}
 
 	function socketEvents () {
 		socket.on('events', function(data) {
 			if (data.typeEvent == 'connected') {
-				console.log('connected');
 				handleConnected(data.value);
 			}
 			if (data.typeEvent == 'start') {
-				console.log('start ' + data.value);
 				handleStart(data.value);
 			}
 			if (data.typeEvent == 'moved') {
-				console.log('moved');
 				handleMoved(data.value);
 			}
 			if (data.typeEvent == 'move') {
-				console.log('move');
 				handleMove(data.value);
 			}
 			if (data.typeEvent == 'disconnect') {
-				console.log('disconnect');
 				handleDisconnect();
 			}
 		});

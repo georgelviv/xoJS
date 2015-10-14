@@ -111,7 +111,7 @@ function initOnline ($rootScope) {
 				self.setData('gameStatus', 'play');
 			}
 
-			if (status == 'win' || status == 'clear') {
+			if (status == 'win' || status == 'clear' || status == 'draw') {
 				resetEvents();
 			}
 		}

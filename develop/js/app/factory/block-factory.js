@@ -161,7 +161,6 @@ function Block ($rootScope) {
 			this.setBlockParam('draw', circleObj.draw);
 			this.setBlockParam('type', 'o');
 			$rootScope.$emit('drawEnd');
-			console.log('drawEnd');
 		}).bind(this);
 
 		drawCircle();
